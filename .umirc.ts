@@ -1,12 +1,14 @@
-import { defineConfig } from 'umi';
+import {defineConfig} from 'umi';
 
 export default defineConfig({
+  publicPath:'./',
+  history:{type:"hash"},
   nodeModulesTransform: {
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
-    {path:'/bigScreen',component:'@/pages/BigScreen/big-screen'}
+    {path: '/', component: '@/pages/index'},
+    {path: '/bigScreen', component: '@/pages/BigScreen/index'}
   ],
   fastRefresh: {},
 });
