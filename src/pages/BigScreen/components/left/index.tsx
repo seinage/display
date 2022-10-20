@@ -4,7 +4,7 @@ import styles from './index.less';
 export default function Left() {
   return (
     <div>
-      <h1 className={styles.title}>Page BigScreen/components/leftFirst/leftFirst</h1>
+      <h1 className={styles.title}>left</h1>
     </div>
   );
 }
