@@ -7,6 +7,7 @@ specifiers:
   '@types/react-dom': ^17.0.0
   '@umijs/preset-react': 1.x
   '@umijs/test': ^3.5.34
+  antd: ^4.23.6
   dva-core: ^1.1.0 | ^1.5.0-0 | ^1.6.0-0
   lint-staged: ^10.0.7
   prettier: ^2.2.0
@@ -22,6 +23,7 @@ specifiers:
 dependencies:
   '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/4.0.0_react@17.0.2
   '@ant-design/pro-layout': registry.npmmirror.com/@ant-design/pro-layout/6.38.22_sfoxds7t5ydpegc3knd667wn6m
+  antd: registry.npmmirror.com/antd/4.23.6_sfoxds7t5ydpegc3knd667wn6m
   dva-core: registry.npmmirror.com/dva-core/1.6.0-beta.7_redux@4.2.0
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2

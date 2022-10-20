@@ -10,5 +10,6 @@ export default defineConfig({
     {path: '/', component: '@/pages/index'},
     {path: '/bigScreen', component: '@/pages/BigScreen/index'}
   ],
+  mfsu: {},
   fastRefresh: {},
 });
