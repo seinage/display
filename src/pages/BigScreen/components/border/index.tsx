@@ -1,10 +1,10 @@
 import {Component, FC} from 'react';
-import styles from '../../index.less';
+import styles from './index.less';
 
-const Border:FC =(props)=>{
+const Border:FC<{}> =(props)=>{
   return (
     <div className={styles.border}>
-      test
+      {props.children}
     </div>
   );
 }

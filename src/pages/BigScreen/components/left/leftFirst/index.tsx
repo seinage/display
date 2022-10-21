@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './index.less';
+import Border from "@/pages/BigScreen/components/border";
 
 export default function LeftFirst() {
   return (
-    <div>
-      <h1 className={styles.title}>Page BigScreen/components/leftFirst/leftFirst</h1>
-    </div>
+    <Border>
+      <div>左一</div>
+    </Border>
   );
 }

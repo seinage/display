@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {CSSProperties} from 'react';
 import styles from './index.less';
+import LeftFirst from "@/pages/BigScreen/components/left/leftFirst";
+
 
 export default function Left() {
   return (
-    <div>
-      <h1 className={styles.title}>left</h1>
-    </div>
+    <LeftFirst></LeftFirst>
   );
 }
