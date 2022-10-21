@@ -5,7 +5,7 @@ const NumberCard: FC<{ count: number, desc: string }> = (props) => {
   return (
     <>
       <div className={styles.count}>44</div>
-      <div className={styles.desc}>今日任务</div>
+      <div className={styles.desc + " iconfont icon-dot1"}>今日任务</div>
     </>
   );
 };
