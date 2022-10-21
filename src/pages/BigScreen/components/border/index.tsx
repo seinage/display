@@ -1,12 +1,14 @@
-import {Component, FC} from 'react';
-import styles from './index.less';
+import { Component, CSSProperties, FC } from "react";
+import styles from "./index.less";
 
-const Border:FC<{}> =(props)=>{
+const Border: FC<{ coverStyle: CSSProperties }> = (props) => {
   return (
-    <div className={styles.border}>
-      {props.children}
+    <div className={styles.border} style={props.coverStyle}>
+      <div className={styles.inner}>
+        {props.children}
+      </div>
     </div>
   );
-}
+};
 
-export default Border
+export default Border;

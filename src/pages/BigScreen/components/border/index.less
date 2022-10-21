@@ -1,8 +1,21 @@
-.border{
+@top: 2.125rem;
+@right: 1.583rem;
+@bottom: 0.875rem;
+@left: 5.5rem;
+.border {
   box-sizing: border-box;
+  border-width: @top @right @bottom @left;
+  border-style: solid;
   border-image: url(~@/assets/images/border.png) 51 38 21 132;
-  border-width: 2.125rem 1.583rem 0.875rem 5.5rem;
   position: relative;
   margin-bottom: 0.833rem;
-  height:4rem;
+}
+
+.inner {
+  position: absolute;
+  top: -@top;
+  right: -@right;
+  bottom: -@bottom;
+  left: -@left;
+  padding: 1rem 1.5rem;
 }
