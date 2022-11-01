@@ -1,5 +1,5 @@
-import { CSSProperties, FC } from 'react';
-import styles from './index.less';
+import { CSSProperties, FC } from "react";
+import styles from "./index.less";
 
 const NumberCard: FC<{
   count: number;
