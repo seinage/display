@@ -6,13 +6,19 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  routes: [
-    {path: '/', component: '@/pages/index'},
-    {path: '/bigScreen', component: '@/pages/BigScreen/index'}
-  ],
+  // routes: [
+  //   {path: '/', component: '@/pages/index'},
+  //   {path: '/bigScreen', component: '@/pages/BigScreen/index'}
+  // ],
+
   mfsu: {},
   fastRefresh: {},
+  antd:{
+    dark: true
+  },
   theme:{
-
+    'bg-color':'#101129',
+    'active-color':'#68d8fe',
   }
+
 });

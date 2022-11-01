@@ -1,11 +1,21 @@
-import { FC } from "react";
-import styles from "./index.less";
+import { CSSProperties, FC } from 'react';
+import styles from './index.less';
 
-const NumberCard: FC<{ count: number, desc: string }> = (props) => {
+const NumberCard: FC<{
+  count: number;
+  desc: string;
+  color: CSSProperties['color'];
+}> = (props) => {
   return (
     <>
-      <div className={styles.count}>44</div>
-      <div className={styles.desc + " iconfont icon-dot1"}>今日任务</div>
+      <div className={styles.count}>{props.count}</div>
+      <div className={styles.desc}>
+        <span
+          className={'icon iconfont icon-dot'}
+          style={{ color: props.color }}
+        ></span>
+        <span className={styles.text}>{props.desc}</span>
+      </div>
     </>
   );
 };

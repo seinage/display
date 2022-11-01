@@ -3,6 +3,7 @@ import styles from './index.less';
 import Title from "@/pages/BigScreen/components/title";
 import Layout from './components/layout';
 
+
 const title = '角钢车间生产智能看板'
 
 const BigScreen: FC = (props) => {
