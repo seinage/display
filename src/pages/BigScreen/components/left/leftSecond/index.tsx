@@ -1,16 +1,23 @@
-import { CSSProperties, FC } from "react";
-import Border from "@/components/border";
+import { CSSProperties, FC } from 'react';
+import Border from '@/components/border';
+import RollTable from '@/components/rollTable';
 
-const borderStyle: CSSProperties = { };
+const borderStyle: CSSProperties = {};
 
-const title = '开机和累计工作时间'
+const innerStyle: CSSProperties = {};
 
-const LeftSecond:FC<{ height: string }> = (props) => {
- return (
-   <Border borderStyle={{ ...borderStyle, height: props.height }} title={title}>
+const title = '开机和累计工作时间';
 
-   </Border>
- );
+const LeftSecond: FC<{ height: string }> = (props) => {
+  return (
+    <Border
+      borderStyle={{ ...borderStyle, height: props.height }}
+      innerStyle={innerStyle}
+      title={title}
+    >
+      <RollTable></RollTable>
+    </Border>
+  );
 };
 
 export default LeftSecond;

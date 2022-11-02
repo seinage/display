@@ -19,7 +19,7 @@ const Border: FC<{
     <div className={styles.border} style={borderStyle}>
       <div className={styles.inner} style={innerStyle}>
         {title ? <div className={styles.title}>{title}</div> : undefined}
-        <div>{children}</div>
+        {children}
       </div>
     </div>
   );

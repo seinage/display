@@ -1,0 +1,35 @@
+@margins: 1.7rem;
+
+.rollTable {
+  margin: 0 -@margins;
+  position: relative;
+  flex: 1;
+  cursor: default;
+}
+.headerLine {
+  background-color: rgba(@geekblue-10, 10%);
+  padding: 0.5rem @margins;
+  margin-top: 0.4rem;
+  color: @blue-9;
+}
+.bodyLine {
+  padding: 0.5rem @margins;
+}
+.rollTableLine {
+  display: flex;
+  position: relative;
+
+  .column {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.rollTableBody {
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+  bottom: 0;
+  overflow: hidden;
+}
