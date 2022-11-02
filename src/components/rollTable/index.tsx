@@ -14,7 +14,6 @@ export interface RollTableSingle {
 
 
 const RollTable: FC<{columns:Column[],tableData:RollTableSingle[]}> = (props) => {
-  const [tableData,useTableData] = useState<RollTableSingle[]>([])
 
   return (
     <div className={styles.rollTable}>

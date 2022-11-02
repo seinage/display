@@ -1,4 +1,4 @@
-import { CSSProperties, FC } from 'react';
+import { createContext, CSSProperties, FC, useEffect, useState } from 'react';
 import Border from '@/components/border';
 import RollTable, { Column, RollTableSingle } from '@/components/rollTable';
 
@@ -18,7 +18,7 @@ const columns: Column[] = [
   { name: '上电时间', width: 30, key: 'powerTime' },
 ];
 
-const tableData: RollTableSingle[] = [
+const table: RollTableSingle[] = [
   {
     person: '方为名',
     team: '角钢小组',
@@ -130,6 +130,18 @@ const tableData: RollTableSingle[] = [
 ];
 
 const LeftSecond: FC<{ height: string }> = (props) => {
+  const [tableData, setTableData] = useState<RollTableSingle[]>(
+    table
+  );
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     if (tableData.length < 10) setTableData([...tableData, table[2]]);
+  //   }, 2000);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // });
   return (
     <Border
       borderStyle={{ ...borderStyle, height: props.height }}

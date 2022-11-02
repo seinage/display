@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useMemo, useRef, useState } from 'react';
 import './index.less';
 import { Column, RollTableSingle } from '@/components/rollTable/index';
 
@@ -15,8 +15,8 @@ const RollTableBody: FC<{
       </span>
     ));
   }
-  function createTable() {
-    return tableData.map((item, idx) => {
+  function createTable(data: RollTableSingle[]) {
+    return data.map((item, idx) => {
       return (
         <div className={'rollTableLine bodyLine'} key={idx}>
           {createLine(item)}
@@ -30,20 +30,40 @@ const RollTableBody: FC<{
       );
     });
   }
-  // useEffect(() => {
-  //   scrollTable();
-  // });
-  setTimeout(()=>{scrollTable()},3000)
+
+  const tableEl = useMemo<JSX.Element[]>(
+    () => createTable(tableData),
+    [tableData],
+  );
+
+  useEffect(() => {
+    // setTableEl(createTable(tableData));
+    scrollTable();
+  }, [tableData]);
+
+  const [openRoll, setOpenRoll] = useState(false);
+
+  const [isHover, setIsHover] = useState(false);
   function scrollTable() {
     const bodyHeight = bodyRef.current?.clientHeight ?? 0;
     const contentHeight = contentRef.current?.clientHeight ?? 0;
-    if (contentHeight > bodyHeight && tableData.length > 0) {
-      console.log('roll');
-    }
+    setOpenRoll(contentHeight > bodyHeight && tableData.length > 0);
   }
   return (
     <div ref={bodyRef} className={'rollTableBody'}>
-      <div ref={contentRef}>{createTable()}</div>
+      <div
+        ref={contentRef}
+        className={'bodyContent'}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+        style={{
+          animationPlayState: openRoll && !isHover ? 'running' : 'paused',
+          animationDuration: tableEl.length + 's',
+        }}
+      >
+        {tableEl}
+        {openRoll ? tableEl : ''}
+      </div>
     </div>
   );
 };
