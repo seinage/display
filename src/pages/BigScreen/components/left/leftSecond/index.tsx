@@ -134,14 +134,6 @@ const LeftSecond: FC<{ height: string }> = (props) => {
     table
   );
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     if (tableData.length < 10) setTableData([...tableData, table[2]]);
-  //   }, 2000);
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // });
   return (
     <Border
       borderStyle={{ ...borderStyle, height: props.height }}
