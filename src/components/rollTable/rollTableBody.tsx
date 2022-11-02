@@ -18,7 +18,7 @@ const RollTableBody: FC<{
   function createTable(data: RollTableSingle[]) {
     return data.map((item, idx) => {
       return (
-        <div className={'rollTableLine bodyLine'} key={idx}>
+        <div className={'rollTableLine bodyLine text-'+item.lineState} key={idx}>
           {createLine(item)}
           {
             <span
@@ -42,7 +42,6 @@ const RollTableBody: FC<{
   }, [tableData]);
 
   const [openRoll, setOpenRoll] = useState(false);
-
   const [isHover, setIsHover] = useState(false);
   function scrollTable() {
     const bodyHeight = bodyRef.current?.clientHeight ?? 0;

@@ -27,6 +27,7 @@ const table: RollTableSingle[] = [
     autoTime: '5h36m',
     manualTime: '5h26m',
     powerTime: '14h59m',
+    lineState:0,
   },
   {
     person: '方为名',
@@ -36,6 +37,7 @@ const table: RollTableSingle[] = [
     autoTime: '5h36m',
     manualTime: '5h26m',
     powerTime: '14h59m',
+    lineState:0
   },
   {
     person: '方为名',
@@ -45,6 +47,7 @@ const table: RollTableSingle[] = [
     autoTime: '5h36m',
     manualTime: '5h26m',
     powerTime: '14h59m',
+    lineState:0,
   },
   {
     person: '方为名',
@@ -54,6 +57,7 @@ const table: RollTableSingle[] = [
     autoTime: '5h36m',
     manualTime: '5h26m',
     powerTime: '14h59m',
+    lineState:0,
   },
   {
     person: '张国富',
@@ -63,6 +67,7 @@ const table: RollTableSingle[] = [
     autoTime: '5h37m',
     manualTime: '3h27m',
     powerTime: '14h58m',
+    lineState:0,
   },
   {
     person: '李伟',
@@ -72,6 +77,7 @@ const table: RollTableSingle[] = [
     autoTime: '8h38m',
     manualTime: '1h28m',
     powerTime: '14h49m',
+    lineState:0,
   },
   {
     person: '张强',
@@ -81,6 +87,7 @@ const table: RollTableSingle[] = [
     autoTime: '6h39m',
     manualTime: '2h29m',
     powerTime: '15h10m',
+    lineState:0,
   },
   {
     person: '史方泽',
@@ -90,6 +97,7 @@ const table: RollTableSingle[] = [
     autoTime: '7h42m',
     manualTime: '3h29m',
     powerTime: '15h10m',
+    lineState:0,
   },
   {
     person: '曹嘉琦',
@@ -99,6 +107,7 @@ const table: RollTableSingle[] = [
     autoTime: '7h39m',
     manualTime: '5h29m',
     powerTime: '14h10m',
+    lineState:0,
   },
   {
     person: '王森',
@@ -108,6 +117,7 @@ const table: RollTableSingle[] = [
     autoTime: '8h12m',
     manualTime: '3h14m',
     powerTime: '14h30m',
+    lineState:0,
   },
   {
     person: '毛长伟',
@@ -117,6 +127,7 @@ const table: RollTableSingle[] = [
     autoTime: '8h43m',
     manualTime: '3h42m',
     powerTime: '13h06m',
+    lineState:0,
   },
   {
     person: '李成祥',
@@ -126,6 +137,7 @@ const table: RollTableSingle[] = [
     autoTime: '6h12m',
     manualTime: '3h29m',
     powerTime: '12h12m',
+    lineState:0,
   },
 ];
 

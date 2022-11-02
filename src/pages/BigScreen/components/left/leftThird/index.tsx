@@ -21,7 +21,8 @@ const table: RollTableSingle[] = [
     errorCode: "无",
     errorStartTime: "无",
     errorTime: "0s",
-    order: "51"
+    order: "51",
+    lineState:0,
   },
   {
     person: "张国富",
@@ -29,7 +30,8 @@ const table: RollTableSingle[] = [
     errorCode: "无",
     errorStartTime: "无",
     errorTime: "0s",
-    order: "52"
+    order: "52",
+    lineState:3,
   },
   {
     person: "李伟",
@@ -37,7 +39,8 @@ const table: RollTableSingle[] = [
     errorCode: "FAULT-0018",
     errorStartTime: "2022/7/16",
     errorTime: "5s",
-    order: "53"
+    order: "53",
+    lineState:0,
   },
   {
     person: "张强",
@@ -45,7 +48,8 @@ const table: RollTableSingle[] = [
     errorCode: "1026-jt-102",
     errorStartTime: "2022/7/14",
     errorTime: "10s",
-    order: "54"
+    order: "54",
+    lineState:2,
   },
 ];
 
