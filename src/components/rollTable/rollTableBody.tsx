@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import './index.less';
 import { Column, RollTableSingle } from '@/components/rollTable/index';
 
@@ -6,12 +6,12 @@ const RollTableBody: FC<{
   columns: Column[];
   tableData: RollTableSingle[];
 }> = ({ columns, tableData }) => {
-  const ref = useRef(null);
+  const bodyRef = useRef<null | HTMLDivElement>(null);
+  const contentRef = useRef<null | HTMLDivElement>(null);
   function createLine(data: RollTableSingle) {
     return columns.map(({ key, width }, idx) => (
       <span className={'column'} style={{ flex: width }} key={key + idx}>
         {data[key] ?? ''}
-
       </span>
     ));
   }
@@ -30,12 +30,20 @@ const RollTableBody: FC<{
       );
     });
   }
-  setTimeout(() => {
-    console.log('ref', ref);
-  }, 3000);
+  // useEffect(() => {
+  //   scrollTable();
+  // });
+  setTimeout(()=>{scrollTable()},3000)
+  function scrollTable() {
+    const bodyHeight = bodyRef.current?.clientHeight ?? 0;
+    const contentHeight = contentRef.current?.clientHeight ?? 0;
+    if (contentHeight > bodyHeight && tableData.length > 0) {
+      console.log('roll');
+    }
+  }
   return (
-    <div className={'rollTableBody'}>
-      <div ref={ref}>{createTable()}</div>
+    <div ref={bodyRef} className={'rollTableBody'}>
+      <div ref={contentRef}>{createTable()}</div>
     </div>
   );
 };
