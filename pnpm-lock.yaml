@@ -8,7 +8,10 @@ specifiers:
   '@umijs/preset-react': 1.x
   '@umijs/test': ^3.5.34
   antd: ^4.23.6
+  antd-dayjs-webpack-plugin: ^1.0.6
+  dayjs: ^1.11.6
   dva-core: ^1.1.0 | ^1.5.0-0 | ^1.6.0-0
+  echarts: ^5.4.0
   lint-staged: ^10.0.7
   prettier: ^2.2.0
   react: 17.x
@@ -24,7 +27,10 @@ dependencies:
   '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/4.0.0_react@17.0.2
   '@ant-design/pro-layout': registry.npmmirror.com/@ant-design/pro-layout/6.38.22_sfoxds7t5ydpegc3knd667wn6m
   antd: registry.npmmirror.com/antd/4.23.6_sfoxds7t5ydpegc3knd667wn6m
+  antd-dayjs-webpack-plugin: registry.npmmirror.com/antd-dayjs-webpack-plugin/1.0.6_dayjs@1.11.6
+  dayjs: registry.npmmirror.com/dayjs/1.11.6
   dva-core: registry.npmmirror.com/dva-core/1.6.0-beta.7_redux@4.2.0
+  echarts: registry.npmmirror.com/echarts/5.4.0
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
   react-router: registry.npmmirror.com/react-router/5.3.4_react@17.0.2
@@ -1994,6 +2000,17 @@ packages:
       color-convert: registry.npmmirror.com/color-convert/2.0.1
     dev: true
 
+  registry.npmmirror.com/antd-dayjs-webpack-plugin/1.0.6_dayjs@1.11.6:
+    resolution: {integrity: sha512-UlK3BfA0iE2c5+Zz/Bd2iPAkT6cICtrKG4/swSik5MZweBHtgmu1aUQCHvICdiv39EAShdZy/edfP6mlkS/xXg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/antd-dayjs-webpack-plugin/-/antd-dayjs-webpack-plugin-1.0.6.tgz}
+    id: registry.npmmirror.com/antd-dayjs-webpack-plugin/1.0.6
+    name: antd-dayjs-webpack-plugin
+    version: 1.0.6
+    peerDependencies:
+      dayjs: '*'
+    dependencies:
+      dayjs: registry.npmmirror.com/dayjs/1.11.6
+    dev: false
+
   registry.npmmirror.com/antd-mobile/2.3.4_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-Uw02Ghc+DPzaQceJQ+5p1ZnQFafvILA0chTTen7m7c89Uzbw6Ny3zsVZDE1gfteNEIsL4JpPe0I/+aI3Q/nPAA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/antd-mobile/-/antd-mobile-2.3.4.tgz}
     id: registry.npmmirror.com/antd-mobile/2.3.4
@@ -3154,10 +3171,10 @@ packages:
     version: 2.29.3
     engines: {node: '>=0.11'}
 
-  registry.npmmirror.com/dayjs/1.11.5:
-    resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.5.tgz}
+  registry.npmmirror.com/dayjs/1.11.6:
+    resolution: {integrity: sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.6.tgz}
     name: dayjs
-    version: 1.11.5
+    version: 1.11.6
 
   registry.npmmirror.com/debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/debug/-/debug-2.6.9.tgz}
@@ -3409,6 +3426,15 @@ packages:
       - react-native
       - react-router
     dev: true
+
+  registry.npmmirror.com/echarts/5.4.0:
+    resolution: {integrity: sha512-uPsO9VRUIKAdFOoH3B0aNg7NRVdN7aM39/OjovjO9MwmWsAkfGyeXJhK+dbRi51iDrQWliXV60/XwLA7kg3z0w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/echarts/-/echarts-5.4.0.tgz}
+    name: echarts
+    version: 5.4.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib/2.3.0
+      zrender: registry.npmmirror.com/zrender/5.4.0
+    dev: false
 
   registry.npmmirror.com/electron-to-chromium/1.4.284:
     resolution: {integrity: sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz}
@@ -7120,7 +7146,7 @@ packages:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.19.4
       classnames: registry.npmmirror.com/classnames/2.3.2
       date-fns: registry.npmmirror.com/date-fns/2.29.3
-      dayjs: registry.npmmirror.com/dayjs/1.11.5
+      dayjs: registry.npmmirror.com/dayjs/1.11.6
       moment: registry.npmmirror.com/moment/2.29.4
       rc-trigger: registry.npmmirror.com/rc-trigger/5.3.1_sfoxds7t5ydpegc3knd667wn6m
       rc-util: registry.npmmirror.com/rc-util/5.24.4_sfoxds7t5ydpegc3knd667wn6m
@@ -9036,6 +9062,12 @@ packages:
       punycode: registry.npmmirror.com/punycode/2.1.1
     dev: true
 
+  registry.npmmirror.com/tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.3.0.tgz}
+    name: tslib
+    version: 2.3.0
+    dev: false
+
   registry.npmmirror.com/tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.4.0.tgz}
     name: tslib
@@ -9585,6 +9617,14 @@ packages:
       normalize-path: registry.npmmirror.com/normalize-path/1.0.0
       strip-indent: registry.npmmirror.com/strip-indent/2.0.0
     dev: true
+
+  registry.npmmirror.com/zrender/5.4.0:
+    resolution: {integrity: sha512-rOS09Z2HSVGFs2dn/TuYk5BlCaZcVe8UDLLjj1ySYF828LATKKdxuakSZMvrDz54yiKPDYVfjdKqcX8Jky3BIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zrender/-/zrender-5.4.0.tgz}
+    name: zrender
+    version: 5.4.0
+    dependencies:
+      tslib: registry.npmmirror.com/tslib/2.3.0
+    dev: false
 
   registry.npmmirror.com/zscroller/0.4.8:
     resolution: {integrity: sha512-G5NiNLKx2+QhhvZi2yV1jjVXY50otktxkseX2hG2N/eixohOUk0AY8ZpbAxNqS9oJS/NxItCsowupy2tsXxAMw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zscroller/-/zscroller-0.4.8.tgz}

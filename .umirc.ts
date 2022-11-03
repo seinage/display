@@ -1,5 +1,6 @@
 import {defineConfig} from 'umi';
 
+const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 export default defineConfig({
   publicPath:'./',
   history:{type:"hash"},
@@ -19,6 +20,10 @@ export default defineConfig({
   theme:{
     'bg-color':'#101129',
     'active-color':'#68d8fe',
-  }
-
+  },
+  chainWebpack:()=>({
+    plugins:[
+      new AntdDayjsWebpackPlugin()
+    ]
+  })
 });

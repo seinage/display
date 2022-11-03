@@ -1,9 +1,18 @@
 import { FC } from "react";
 import Border from "@/components/border";
+import { Col, Row } from "antd";
 
 const RightThird:FC<{ height: string }> = (props) => {
  return (
-   <Border borderStyle={{height:props.height}}></Border>
+   <Row gutter={16}>
+     <Col span={12}>
+       <Border borderStyle={{height:props.height}}></Border>
+     </Col>
+     <Col span={12}>
+       <Border borderStyle={{height:props.height}}></Border>
+     </Col>
+   </Row>
+
  );
 };
 
