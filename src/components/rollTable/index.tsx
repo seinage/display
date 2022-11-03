@@ -8,11 +8,12 @@ export interface Column {
   width: number;
   key: string;
 }
-export interface RollTableSingle {
-  // 行状态，0为正常，1为success，2为warning，3为danger
-  lineState: 0 | 1 | 2 | 3;
+export type RollTableSingle = {
   [x: string]: string | number | boolean;
-}
+} & {
+  // 行状态，0为正常，1为success，2为warning，3为danger
+  lineState?: 0 | 1 | 2 | 3;
+};
 
 const RollTable: FC<{ columns: Column[]; tableData: RollTableSingle[] }> = (
   props,

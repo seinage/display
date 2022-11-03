@@ -8,18 +8,19 @@ import styles from './index.less'
 
 const rowStyle: CSSProperties = {
   width: '100%',
+  justifyContent:'space-between'
 };
 
 const Layout: FC = (props) => {
   return (
-    <Row gutter={16} style={rowStyle}>
-      <Col className={styles.left} span={8}>
+    <Row style={rowStyle}>
+      <Col className={styles.left} span={7}>
         <Left></Left>
       </Col>
-      <Col className={styles.middle} span={8}>
+      <Col className={styles.middle} span={10}>
         <Middle></Middle>
       </Col>
-      <Col className={styles.right} span={8}>
+      <Col className={styles.right} span={7}>
         <Right></Right>
       </Col>
     </Row>

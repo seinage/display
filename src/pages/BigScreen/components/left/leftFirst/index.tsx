@@ -28,7 +28,7 @@ const LeftFirst: FC<{ height: string }> = (props) => {
     <Border borderStyle={{ ...borderStyle, height: props.height }}>
       <Row gutter={16} style={{ justifyContent: 'space-between' }}>
         {numberList.map(({ count, desc, color }, idx) => (
-          <Col span={'6'} key={idx}>
+          <Col span={'7'} key={idx}>
             <NumberCard count={count} desc={desc} color={color}></NumberCard>
           </Col>
         ))}

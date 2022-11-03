@@ -18,7 +18,7 @@ const RollTableBody: FC<{
   function createTable(data: RollTableSingle[]) {
     return data.map((item, idx) => {
       return (
-        <div className={'rollTableLine bodyLine text-'+item.lineState} key={idx}>
+        <div className={`rollTableLine bodyLine text-${item.lineState??0}`} key={idx}>
           {createLine(item)}
           {
             <span
