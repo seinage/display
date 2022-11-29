@@ -16,7 +16,7 @@ const RightFourth: FC<{ height: string }> = (props) => {
   ]);
 
   useEffect(() => {
-    createChart();
+    // createChart();
   }, [data]);
 
   function createChart() {
