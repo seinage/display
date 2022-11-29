@@ -29,7 +29,8 @@ jobs:
         with:
           node-version: 16
           cache: pnpm
-
+      - name: Build
+        run: pnpm.cmd run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
