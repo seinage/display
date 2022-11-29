@@ -28,7 +28,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: pnpm run build
+          cache: pnpm
+      - name: Install Deps
+        uses: pnpm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
