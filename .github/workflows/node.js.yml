@@ -30,7 +30,7 @@ jobs:
           node-version: 16
           cache: pnpm
       - name: Build
-        run: pnpm.cmd run build
+        run: pnpm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
