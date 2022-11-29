@@ -18,6 +18,7 @@ export default defineConfig({
     dark: true
   },
   theme:{
+
     'bg-color':'#101129',
     'active-color':'#68d8fe',
   },
